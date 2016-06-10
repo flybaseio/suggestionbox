@@ -20,8 +20,8 @@ To add fields, you just add them to the `index.html` file, with meta data to tel
 
 ```
 <div class='form-element'>
-	<label for='blog'>What is your website's homepage URL?</label>
-	<input type="url" id='url' data-label="URL" data-order="1" placeholder='http://' class='form-input' required>
+	<label for='subject'>Subject</label>
+	<input type="text" id='subject' data-label="Subject" data-order="1" placeholder='' class='form-input' required>
 </div>
 ```
 
@@ -31,5 +31,3 @@ To add fields, you just add them to the `index.html` file, with meta data to tel
 When data is saved, it will save a `_meta` field which contains sort order, etc for displaying.
 
 This is meant to all be auto-generating and quick and dirty so feel free to modify and play around with it.
-
-There is a field called `testfield` as well which is just a kind of basic anti-bot prevention. 
