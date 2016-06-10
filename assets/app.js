@@ -1,9 +1,9 @@
-var listApp = function(){
+var suggestionsApp = function(){
 	this.url = document.location.pathname;
 	return this;
 }
 
-listApp.prototype.start = function(){
+suggestionsApp.prototype.start = function(){
 	var api_key = "YOUR-FLYBASE-API-KEY";
 	var app_name = "suggestionbox";
 	
@@ -11,7 +11,7 @@ listApp.prototype.start = function(){
 	return this;
 };
 
-listApp.prototype.view = function( table_name ){
+suggestionsApp.prototype.view = function( table_name ){
 	var self = this;
 	var table_name = "#" + table_name;
 	var table_headers = [];
@@ -49,7 +49,7 @@ listApp.prototype.view = function( table_name ){
 };
 
 //	save the form into your flybase app.
-listApp.prototype.save = function( form_name ){
+suggestionsApp.prototype.save = function( form_name ){
 	var self = this;
 	var form_name = "#" + form_name;
 	$( form_name ).submit(function( event ) {
