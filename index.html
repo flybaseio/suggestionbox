@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Suggestion Box</title>	
+	<link rel="stylesheet" href="https://cdn.flybase.io/css/base.css">
+	<link rel="stylesheet" href="https://cdn.flybase.io/css/light.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+</head>
+<body>
+<header role="banner">
+    <div class="container">
+		<div class="cf"><a href="suggestions.html" title="" class="button button-primary pull-right"><span class="octicon octicon-home"></span> View Suggestions</a></div>
+		<h1><span class="mega-octicon octicon-beaker"></span> Suggestion Box</h1>
+    </div>
+</header>
+<div class="container">
+	<section>
+		<p>We are excited to read your suggestion! All input is 100% anonymous so please provide as much info as possible. The more info you provide, the better we will understand your idea.</p>
+		<div class='message' style="display: none;" id="flash"></div>	
+		<div class='message message-error' style="display: none;" id="revflash"></div>
+		<form id="new_form">
+			<fieldset>
+				<div class='form-element'>
+					<label for='subject'>Subject</label>
+					<input type="text" id='subject' data-label="Subject" data-order="1" placeholder='' class='form-input' required>
+				</div>
+				<div class='form-element'>
+					<label for='message'>Your anonymous message</label>
+					<textarea id='message' data-label="Your anonymous message" class='form-input' data-order="3" placeholder=""></textarea>
+				</div>
+				<p><small>Be assured that your message is 100% private, confidential and anonymous. Absolutely no identifying information is sent or saved with your message.</small></p>
+				<button type='submit' class='button button-primary'>Submit Feedback</button>
+			</fieldset>
+		</form>
+	</section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdn.flybase.io/flybase.js"></script>
+<script src="./assets/app.js"></script>
+<script>
+	var app = new listApp();
+	app.start().save("new_form");
+</script>
+</body>
+</html>
